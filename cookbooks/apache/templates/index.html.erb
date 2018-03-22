@@ -1,0 +1,13 @@
+<html>
+	<body>
+<h1> HELLO WORLD! </h1>
+                <h2>HOSTNAME: <%= node['hostname'] %><h2>
+		<h2>IPADDRESS: <%= node['network']['interfaces']['eth0']['addresses'].keys.select { |a| a[/\A\d+\.\d+\.\d+\.\d+\Z/] }.first %><h2>
+                <h2>CPU: <%= node['cpu']['0']['mhz'] %><h2>
+                <h2>MEMORY <%= node['memory']['total'] %><h2>
+		<h2>NAME: <%= @name %> <h2>
+		<img src="yoda-bong.jpg">
+	</body>
+</html>
+
+
